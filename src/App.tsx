@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-import Headerfile from './components/Headerfile'
-import Interface from './components/Interfacefile'
-import Interfacefile from './components/Interfacefile'
+import Headerfile from '../components/Headerfile'
+
+import Interfacefile from '../components/Interfacefile'
 
 const App = () => {
   return (
