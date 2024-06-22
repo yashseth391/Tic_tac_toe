@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 const Headerfile = () => {
 
-    const [playerTurn,setPlayerTurn] =useState("Player 0's turn");
+  const [playerTurn,setPlayerTurn] =useState("Player 0's turn");
   return (
     <View style={styles.container}>
       <Text style={styles.turnText}> {playerTurn}   </Text>
