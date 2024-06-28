@@ -123,15 +123,20 @@ function App(): JSX.Element {
           </Text>
         </View>
       )}
-     
+      {/* Game Grid */}
       <FlatList
       numColumns={3}
       data={gameState}
       style={styles.grid}
-      renderItem={({item,index}) => (
-          <Pressable key={index}>
-            <Icons {...item}/>
-          </Pressable>
+      
+      renderItem={({item, index}) => (
+        <Pressable
+        
+        style={styles.card}
+        onPress={() => onChangeItem(index)}
+        >
+          <Icons name={item}/>
+        </Pressable>
       )}
       />
       {/* game action */}
@@ -140,7 +145,7 @@ function App(): JSX.Element {
       onPress={reloadGame}
       >
         <Text style={styles.gameBtnText}>
-          {gameWinner ? 'Start new game' : 'reLoad the game'}
+          {gameWinner ? 'Start new game' : 'Reload the game'}
         </Text>
       </Pressable>
     </SafeAreaView>
